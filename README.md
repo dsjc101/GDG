@@ -11,6 +11,8 @@ Confetti Animation: Festive confetti falls from the top of the screen once the c
 Party Pooper Effect: A full-screen burst animation signaling the start of the celebration.
 Rickroll Button: Clicking the "Click for your gift" button will redirect to a Rickroll video.
 
+Note- wanted to implement api to get large list of wishes and suggestions , however failed to do it in given timeframe.
+
 Files
 
 HTML (index.html): Contains the structure of the page, including the countdown, profile, and celebration sections.
