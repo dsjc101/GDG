@@ -6,9 +6,11 @@ body, html {
     width: 100%;
     background: #000; /* Black background for premium look */
     font-family: 'Arial', sans-serif;
-  }
-  
-  .page {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Make sure the page container fits the screen */
+.page {
     display: none;
     align-items: center;
     justify-content: center;
@@ -16,62 +18,63 @@ body, html {
     text-align: center;
     height: 100%;
     width: 100%;
-  }
-  
-  .page.active {
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure active page takes full screen */
+.page.active {
     display: flex;
-  }
-  
-  /* Split Layout for Page 1 */
-  .split-layout {
+}
+
+/* Split Layout for Page 1 */
+.split-layout {
     display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
     height: 100%;
-  }
-  
-  .left, .right {
+    width: 100%;
+}
+
+/* Left and Right Sections */
+.left, .right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-  }
-  
-  /* Countdown Section */
-  .luxury-heading {
+    max-width: 100%; /* Prevent content overflow */
+}
+
+/* Countdown Section */
+.luxury-heading {
     font-size: 2.5rem;
     color: #ffd700;
     text-shadow: 0 0 15px #ffd700;
     margin-bottom: 20px;
-  }
-  
-  .countdown-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .countdown-circle {
+}
+
+/* Countdown Circle */
+.countdown-circle {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px; /* Adjust width */
+    height: 250px; /* Adjust height */
     border-radius: 50%;
     border: 5px solid rgba(255, 215, 0, 0.5);
     background: transparent;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-  }
-  
-  .countdown-text {
+}
+
+.countdown-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 1.8rem; /* Adjust font size */
     color: #ffd700;
     text-shadow: 0 0 20px #ffd700;
-  }
-  
-  .suggestions-box {
+}
+
+/* Suggestions Box */
+.suggestions-box {
     margin-top: 20px;
     background: #222;
     color: #ffd700;
@@ -80,61 +83,43 @@ body, html {
     width: 80%;
     text-align: center;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-  }
-  
-  .suggestions-box p {
-    font-size: 1.2rem;
-  }
-  
-  /* Mini-Profile Section */
-  #mini-profile {
+}
+
+/* Profile Section */
+#mini-profile {
     text-align: center;
     color: white;
-  }
-  
-  .profile-pic {
+    max-width: 90%; /* Ensure profile text fits on smaller screens */
+}
+
+.profile-pic {
     width: 80px;
     height: 80px;
     border-radius: 50%; /* Circular Profile Picture */
     border: 3px solid #ffd700;
     margin-bottom: 10px;
-  }
-  
-  .profile-info h2 {
+}
+
+.profile-info h2 {
     margin: 0;
     color: #ffd700;
-  }
-  
-  .profile-info p {
+}
+
+.profile-info p {
     color: #e6e6e6;
-  }
-  /* Confetti Canvas */
+}
+
+/* Confetti Canvas */
 canvas#confetti {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
     pointer-events: none;
-  }
-  
-  /* Party Pooper Animation */
-  .party-pooper {
-    animation: pooper-burst 1s forwards;
-  }
-  
-  @keyframes pooper-burst {
-    0% {
-      opacity: 1;
-      transform: scale(0);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(3);
-    }
-  }
-  
-  /* Buttons */
-  .btn {
+}
+
+/* Buttons */
+.btn {
     padding: 10px 20px;
     background: #ffd700;
     color: black;
@@ -143,27 +128,64 @@ canvas#confetti {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-  }
-  .links {
-    text-decoration: none;
-  }
-  .btn:hover {
+    max-width: 100%; /* Prevent overflow */
+}
+
+.btn:hover {
     background: #e6c700;
-  }
-  
-  .bottom-center {
+}
+
+/* Centered Button at the Bottom */
+.bottom-center {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  /* New Year Wish Text */
+}
+
+/* New Year Wish Text */
 #dynamicWish {
     font-size: 2rem;
     font-weight: bold;
     color: #FFD700; /* Gold color */
     text-align: center;
     margin: 20px 0;
-  }
-  
-  
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .luxury-heading {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .countdown-circle {
+        width: 200px; /* Smaller countdown circle */
+        height: 200px;
+    }
+
+    .countdown-text {
+        font-size: 1.5rem; /* Smaller countdown text */
+    }
+
+    .suggestions-box {
+        width: 90%; /* Adjust suggestions box width */
+    }
+
+    .profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    /* Make the button smaller on mobile */
+    .btn {
+        padding: 8px 16px;
+    }
+}
