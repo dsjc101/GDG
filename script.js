@@ -136,7 +136,7 @@ function triggerPartyPooper() {
   // Remove burst effect after animation
   setTimeout(() => {
     document.body.removeChild(burst);
-  }, 1000);
+  }, 100);
 
   // Start confetti
   createConfetti();
