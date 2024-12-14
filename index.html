@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divyansh Singh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Countdown Page -->
+  <div id="page1" class="page active">
+    <div class="content split-layout">
+      <!-- Left: Countdown -->
+      <div class="left">
+        <h1 class="luxury-heading">New Year Timer</h1>
+        <div class="countdown-wrapper">
+          <div class="countdown-circle">
+            <div id="countdown" class="countdown-text">00:00:00:00</div>
+          </div>
+          <div id="suggestions" class="suggestions-box">
+            <p id="suggestion-text">Suggested: New Year Resolution</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Mini-Profile -->
+      <div class="right">
+        <div id="mini-profile">
+          <img src="profile.png" alt="Your Picture" class="profile-pic">
+          <div class="profile-info">
+            <h2>Divyansh Singh</h2>
+            <p>A second year CE UG<br><br>My skills include C,C++,Python,HTML,CSS<br><br>However my ultimate aim is to be a chill guy</p>
+            <p><a href="https://www.instagram.com/unfunny_iitian/">Click to see my attempt to be a chill guy</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="preview-btn" class="btn bottom-center">Preview Celebration</button>
+  </div>
+
+  <!-- Celebration Page -->
+  <div id="page2" class="page">
+    <canvas id="confetti"></canvas>
+    <div class="content">
+      <h1 class="luxury-heading" id="newYearMessage">🎉 Happy New Year! 🎉</h1>
+      <p id="dynamicWish" class="luxury-text">May this year bring happiness, success, and prosperity!</p>
+      <button id="gift-btn" class="btn">Click for your gift</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #000; /* Black background for premium look */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .page {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .page.active {
+    display: flex;
+  }
+  
+  /* Split Layout for Page 1 */
+  .split-layout {
+    display: flex;
+    height: 100%;
+  }
+  
+  .left, .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Countdown Section */
+  .luxury-heading {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 0 0 15px #ffd700;
+    margin-bottom: 20px;
+  }
+  
+  .countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .countdown-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 215, 0, 0.5);
+    background: transparent;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  
+  .countdown-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #ffd700;
+    text-shadow: 0 0 20px #ffd700;
+  }
+  
+  .suggestions-box {
+    margin-top: 20px;
+    background: #222;
+    color: #ffd700;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .suggestions-box p {
+    font-size: 1.2rem;
+  }
+  
+  /* Mini-Profile Section */
+  #mini-profile {
+    text-align: center;
+    color: white;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Circular Profile Picture */
+    border: 3px solid #ffd700;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info h2 {
+    margin: 0;
+    color: #ffd700;
+  }
+  
+  .profile-info p {
+    color: #e6e6e6;
+  }
+  /* Confetti Canvas */
+canvas#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* Party Pooper Animation */
+  .party-pooper {
+    animation: pooper-burst 1s forwards;
+  }
+  
+  @keyframes pooper-burst {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    background: #ffd700;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .links {
+    text-decoration: none;
+  }
+  .btn:hover {
+    background: #e6c700;
+  }
+  
+  .bottom-center {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* New Year Wish Text */
+#dynamicWish {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold color */
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  
